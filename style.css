@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    background: #9C19E0;
+    height: 4rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 27px;
+    position: fixed;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+.navmenu {
+    background: none;
+    border: none;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.navtext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    color: white;
+}
+
+.navtext:hover {
+    color: aqua;
+    transition: 1.2s;
+}
+
+.icons {
+    display: none;
+}
+
+.navitem {
+    text-decoration: none;
+}
+
+.navi {
+    position: fixed;
+    top: 4rem;
+    background: #000D6B;
+    width: 100%;
+    height: calc(100% - 4rem);
+    overflow-y: auto;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+.navioff {
+    left: 100%;
+}
+
+.content {
+    margin-top: 4rem;
+}
+
+.productos {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2rem;
+}
+
+.producto {
+    background-color: white;
+    width: 200px;
+    height: 250px;
+    min-width: 200px;
+    min-height: 250px;
+    margin: 1rem;
+    position: relative;
+    transition: 0.2s;
+}
+
+.producto::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: ' ';
+    background: linear-gradient(to right, #fbd3e9, #bb377d);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.producto:hover {
+    width: 210px;
+    height: 260px;
+    min-width: 210px;
+    min-height: 260px;
+    transition: 0.2s;
+}
