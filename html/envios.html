@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/44fb1cf7da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+    <title>Yokai Argentina</title>
+</head>
+
+<body>
+    <div class="display">
+        <header class="header">
+
+            <a class="logo" href="/index.html">
+                Yokai
+            </a>
+
+            <button class="navmenu"><i class="fas fa-bars"></i></button>
+            <ul class="navi navioff">
+                <li class="navili">
+                    <a href="/index.html" class="navitem"><i class="fas fa-home icons"></i> <span class="navtext">Home</span></a>
+                </li>
+                <li class="navili">
+                    <a href="/html/contacto.html" class="navitem"><i class="fas fa-pray icons"></i><span class="navtext">Contacto</span></a>
+                </li>
+                <li class="navili">
+                    <a href="/html/envios.html" class="navitem"><i class="fas fa-truck icons"></i><span class="navtext">Envios</span></a>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2 class="titulo">Formulario de Contacto</h2><br>
+            <p class="topper">Rellena el siguiente formulario para que podamos contactarte y confirmar el envio.</p>
+            <form class="formulario" action="data.html" target="_blank">
+                <label for="Nombre">Nombre: </label><input class="boxes" type="text" name="Nombre" placeholder="Ingrese su nombre aqui....."><br><br>
+                <label for="Apellido">Apellido: </label><input class="boxes" type="text" name="Apellido" placeholder="Ingrese su apellido aqui....."><br><br>
+                <label for="Direccion">Direccion: </label><input class="boxes" type="text" name="Direccion" placeholder="Ej.: Calle Falsa 123....."><br><br>
+                <label for="Telefono">Telefono: </label><input class="boxes" type="number" name="Telefono"><br><br>
+                <label for="Provincia_y_Ciudad">Provincia y Ciudad: </label><input class="boxes" type="text" name="Provincia_y_Ciudad" placeholder="Ej.: Buenos Aires, CABA....."><br><br>
+                <label for="CP">CP: </label><input class="boxes small" type="number" name="CP"><br><br>
+                <label for="Fecha">Fecha de recepcion: </label><input class="boxes small" type="date" name="Fecha" placeholder="Ingrese la fecha en la que puede recibir el envio">
+                <input class="send" type="submit" value="Enviar">
+                <p>Si ustede hace click en el boton "Enviar", la informacions era enviada a la pagina "data.html"</p>
+            </form>
+        </div>
+        <footer class="footer">
+            <br>
+            <p>Yokai Argentina todos los derechos reservados @2021</p>
+            <br>
+        </footer>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

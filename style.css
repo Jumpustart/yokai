@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Da estilo al scrollbar cuando tiene que aparecer*/
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #9C19E0;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    background: #9C19E0;
+    height: 4rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 27px;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    margin-left: 10px;
+    font-family: 'Righteous', cursive;
+    text-decoration: none;
+    color: black;
+}
+
+.navmenu {
+    background: none;
+    border: none;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.navitem {
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    color: white;
+    font-family: 'Righteous', cursive;
+}
+
+.navitem:hover {
+    color: #fbd3e9;
+    transition: 1.2s;
+}
+
+.icons {
+    display: none;
+}
+
+
+/*Por default queda escondido el menu del navbar a la derecha de la pantalla*/
+
+.navi {
+    position: fixed;
+    top: 4rem;
+    background: #bb377d;
+    width: 100%;
+    height: calc(100% - 4rem);
+    overflow-y: auto;
+    right: 0%;
+    transition: right 0.5s;
+}
+
+
+/*Con javascript se detecta cuando se hace click en las tres barras en la clase .navmenu y se desplega*/
+
+.navioff {
+    right: 100%;
+}
+
+.topper {
+    display: grid;
+    place-items: center;
+    margin-top: 5px;
+    font-family: 'Righteous', cursive;
+    font-size: 15px;
+}
+
+.top {
+    padding: 4px;
+    color: #9C19E0;
+}
+
+.titulo {
+    font-size: 20px;
+    color: #2b093d;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 4rem;
+    min-height: calc(100vh - 4rem - 4rem);
+    align-items: center;
+}
+
+.productos {
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.producto {
+    background-color: white;
+    width: 200px;
+    height: 250px;
+    min-width: 200px;
+    min-height: 250px;
+    margin: 0.5rem;
+    position: relative;
+    color: #2b093d;
+}
+
+.producto img {
+    width: 160px;
+    height: 180px;
+    margin: 15px 21px;
+    margin-bottom: 5px;
+}
+
+.under {
+    display: flex;
+    flex-direction: column wrap;
+}
+
+.cartbutton {
+    background: #fbd3e9;
+    border-color: #bb377d;
+    color: #bb377d;
+    width: 50px;
+}
+
+.producto::after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: ' ';
+    background: linear-gradient(to left, #fbd3e9, #bb377d);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(5px);
+    transition: 0.5s;
+}
+
+
+/*Aca se aplica la transicion a la sombra de los cuadros al hacer hover*/
+
+.producto:hover::after {
+    filter: blur(15px);
+    transition: 0.5s;
+}
+
+.bot {
+    font-family: 'Righteous', cursive;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: #9C19E0;
+}
+
+.datos {
+    display: flex;
+    flex-flow: column;
+    margin: 1rem;
+    margin-left: 5px;
+}
+
+.dato {
+    list-style: none;
+    font-family: 'Righteous', cursive;
+    color: #9C19E0;
+}
+
+.mapa {
+    height: 300px;
+    width: 350px;
+    margin-top: 1rem;
+}
+
+.formulario {
+    margin-top: 2rem;
+    font-family: 'Righteous', cursive;
+}
+
+.footer {
+    display: flex;
+    background: #9C19E0;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Righteous', cursive;
+    font-size: 14px;
+}
+
+@media only screen and (min-width:768px) {
+    .productos {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+    .topper {
+        font-size: 30px;
+    }
+    .titulo {
+        font-size: 40px;
+    }
+    .bot {
+        font-size: 30px;
+    }
+    .footer {
+        font-size: 25px;
+    }
+    .datos {
+        margin-top: 4.5rem;
+    }
+    .dato {
+        font-size: 25px;
+    }
+    .mapa {
+        height: 400px;
+        width: 700px;
+        margin-top: 3rem;
+    }
+    .formulario {
+        font-size: 25px;
+    }
+    .boxes {
+        width: 70%;
+        height: 22px;
+    }
+    .small {
+        width: 20%;
+        height: 22px;
+    }
+    .send {
+        width: 100%;
+        height: 22px;
+    }
+}
+
+@media only screen and (min-width:1025px) {
+    .display {
+        flex-direction: row;
+    }
+    .footer {
+        display: none;
+    }
+    .header {
+        flex-direction: column;
+        width: 5rem;
+        height: 100%;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .icons {
+        display: block;
+        color: white;
+    }
+    .content {
+        margin-left: 5rem;
+    }
+    .navi {
+        top: initial;
+        width: 13.3rem;
+        height: 100%;
+        overflow-y: initial;
+        right: 80%;
+        z-index: -1;
+        background: #9C19E0;
+    }
+    .navioff {
+        right: 100%;
+    }
+    .navili {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .navitem {
+        margin-top: 10rem;
+    }
+    .mapa {
+        margin-left: 5rem;
+    }
+}
+
+@media only screen and (min-width:1461px) {
+    .navi {
+        width: 19rem;
+    }
+}
